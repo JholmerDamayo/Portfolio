@@ -9,7 +9,7 @@ import frontendEngineerPreview from '../assets/experience-frontend-engineer.png'
 const roles = [
   {
     id: 'senior-frontend-developer',
-    period: '2023 - 2025',
+    period: '2026',
     title: 'Prompt Engineering',
     description:
       'Designing structured prompts, workflow logic, and AI-assisted outputs that improve response quality, consistency, and task completion across practical use cases.',
@@ -19,7 +19,7 @@ const roles = [
   },
   {
     id: 'full-stack-developer',
-    period: '2025',
+    period: '2026',
     title: 'Full Stack Developer',
     description:
       'Built end-to-end product features with React, Node.js, and PostgreSQL for fast-moving startup teams.',

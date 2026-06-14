@@ -262,18 +262,19 @@ export const About: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-slate-950 p-5 shadow-[0_24px_70px_rgba(15,23,42,0.16)] sm:rounded-[2rem] sm:p-8 lg:p-10"
+            className="relative overflow-hidden rounded-[1.5rem] border border-white/18 bg-white/[0.08] p-5 shadow-[0_24px_70px_rgba(15,23,42,0.2)] backdrop-blur-xl sm:rounded-[2rem] sm:p-8 lg:p-10"
           >
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-30"
+              className="absolute inset-0 bg-cover bg-center opacity-45"
               style={{ backgroundImage: `url(${portraitImage})` }}
             />
-            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(2,6,23,0.88),rgba(15,23,42,0.78),rgba(2,6,23,0.9))]" />
+            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(2,6,23,0.72),rgba(15,23,42,0.58),rgba(2,6,23,0.76))] backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-white/[0.06]" />
             <div className="relative z-10">
               <h2 className="mb-6 text-3xl font-bold tracking-tight text-white sm:mb-8 sm:text-4xl">About Me</h2>
               <div className="space-y-5 text-base leading-7 text-slate-200/88 sm:space-y-6 sm:text-lg sm:leading-relaxed">
                 <p>
-                  Iâ€™m Jholmer L. Damayo, a fresh graduating Bachelor of Science in Information Technology student with a strong passion for software development and technology. I enjoy building systems and applications that solve real-world problems while improving user experience and functionality.
+                  I'm Jholmer L. Damayo, a fresh graduating Bachelor of Science in Information Technology student with a strong passion for software development and technology. I enjoy building systems and applications that solve real-world problems while improving user experience and functionality.
                 </p>
                 <p>
                   My journey in IT has helped me develop skills in web and mobile development, UI/UX design, database management, and problem-solving. I am continuously learning new technologies and improving my craft through personal projects, academic work, and hands-on experience.
