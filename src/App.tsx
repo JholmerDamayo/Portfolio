@@ -283,7 +283,7 @@ export default function App() {
               willChange: 'transform'
             }}
           >
-            <Projects onIdleReturnHome={() => navigateToSection('home')} />
+            <Projects />
           </div>
         </div>
         
