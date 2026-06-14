@@ -44,7 +44,7 @@ export const Experience: React.FC = () => {
   const activeRole = roles.find((role) => role.id === activeRoleId) ?? roles[0];
 
   return (
-    <section className="relative overflow-hidden py-24 bg-[#02030a] transition-colors duration-300">
+    <section className="relative overflow-hidden py-16 bg-[#02030a] transition-colors duration-300 sm:py-24">
       <LiquidEther
         className="absolute inset-0 z-0 opacity-90"
         colors={['#5227FF', '#FF9FFC', '#B497CF']}
@@ -66,7 +66,7 @@ export const Experience: React.FC = () => {
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(82,39,255,0.18),transparent_34%),radial-gradient(circle_at_82%_24%,rgba(255,159,252,0.14),transparent_32%),linear-gradient(180deg,rgba(2,6,23,0.72),rgba(2,6,23,0.9))]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-14">
+        <div className="max-w-3xl mb-10 sm:mb-14">
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export const Experience: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.04 }}
-            className="mb-4 text-4xl font-bold tracking-tight text-white"
+            className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl"
           >
             Building products with strong UI craft and reliable engineering.
           </motion.h2>
@@ -90,7 +90,7 @@ export const Experience: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.08 }}
-            className="text-lg text-gray-200/80"
+            className="text-base leading-7 text-gray-200/80 sm:text-lg"
           >
             A snapshot of the teams, roles, and focus areas that shaped my work across frontend and full stack delivery.
           </motion.p>
@@ -104,7 +104,7 @@ export const Experience: React.FC = () => {
             transition={{ duration: 0.55 }}
             className="self-stretch lg:sticky lg:top-28"
           >
-            <div className="relative h-full min-h-[640px] overflow-hidden rounded-[2rem] border border-white/12 bg-white/8 shadow-[0_24px_80px_rgba(0,0,0,0.34)] backdrop-blur-[6px] lg:min-h-[660px]">
+            <div className="relative h-full min-h-[420px] overflow-hidden rounded-[1.5rem] border border-white/12 bg-white/8 shadow-[0_24px_80px_rgba(0,0,0,0.34)] backdrop-blur-[6px] sm:min-h-[560px] sm:rounded-[2rem] lg:min-h-[660px]">
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,10,24,0.08)_0%,rgba(8,10,24,0.5)_100%)]" />
               <AnimatePresence mode="wait">
                 <motion.div
@@ -148,7 +148,7 @@ export const Experience: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.08 }}
                   onMouseEnter={() => setActiveRoleId(role.id)}
                   onFocus={() => setActiveRoleId(role.id)}
-                  className={`w-full rounded-3xl border p-8 text-right shadow-[0_18px_60px_rgba(0,0,0,0.24)] backdrop-blur-[4px] transition-all duration-300 ${
+                  className={`w-full rounded-3xl border p-5 text-left shadow-[0_18px_60px_rgba(0,0,0,0.24)] backdrop-blur-[4px] transition-all duration-300 sm:p-8 md:text-right ${
                     isActive
                       ? 'border-violet-300/40 bg-white/14'
                       : 'border-white/10 bg-white/8 hover:border-violet-300/25 hover:bg-white/12'
@@ -156,7 +156,7 @@ export const Experience: React.FC = () => {
                 >
                   <div className="flex flex-col gap-6 md:flex-row-reverse md:items-start md:justify-between">
                     <div className="max-w-2xl md:ml-auto">
-                      <div className="mb-4 flex items-center justify-end gap-3">
+                      <div className="mb-4 flex items-center justify-start gap-3 md:justify-end">
                         <div>
                           <h3 className="text-2xl font-bold text-white">{role.title}</h3>
                         </div>
@@ -169,7 +169,7 @@ export const Experience: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="inline-flex items-center gap-2 self-end rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold whitespace-nowrap text-white md:self-start">
+                    <div className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold whitespace-nowrap text-white md:self-start">
                       <Sparkles className="w-4 h-4" />
                       <span>{role.period}</span>
                     </div>

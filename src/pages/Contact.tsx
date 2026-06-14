@@ -40,7 +40,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#040412] py-24 transition-colors duration-300">
+    <section className="relative overflow-hidden bg-[#040412] py-16 transition-colors duration-300 sm:py-24">
       <div className="absolute inset-0 z-0">
         <SoftAurora
           speed={0.6}
@@ -63,15 +63,15 @@ export const Contact: React.FC = () => {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <div className="mb-16 text-center">
+          <div className="mb-10 text-center sm:mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="mb-4 text-4xl font-bold tracking-tight text-white">Get In Touch</h2>
-              <p className="text-lg text-slate-300/82">
+              <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Get In Touch</h2>
+              <p className="text-base leading-7 text-slate-300/82 sm:text-lg">
                 Have a project in mind or just want to say hi? Feel free to reach out!
               </p>
             </motion.div>
@@ -84,7 +84,7 @@ export const Contact: React.FC = () => {
                   <Mail className="h-6 w-6 text-white" />
                 </div>
                 <h4 className="mb-1 font-bold text-white">Email</h4>
-                <p className="text-sm text-slate-300/78">damayojholmer@gmail.com</p>
+                <p className="break-all text-sm text-slate-300/78">damayojholmer@gmail.com</p>
               </div>
               
               <div className="rounded-2xl border border-white/12 bg-white/8 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl">
@@ -103,9 +103,9 @@ export const Contact: React.FC = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    className="absolute -top-12 left-0 right-0 z-10 flex justify-center"
+                  className="absolute -top-12 left-0 right-0 z-10 flex justify-center px-2"
                   >
-                    <div className="flex items-center space-x-2 rounded-full border border-emerald-400/30 bg-emerald-400/12 px-6 py-3 text-emerald-100 shadow-lg backdrop-blur-md">
+                    <div className="flex items-center space-x-2 rounded-full border border-emerald-400/30 bg-emerald-400/12 px-4 py-3 text-emerald-100 shadow-lg backdrop-blur-md sm:px-6">
                       <Send className="h-4 w-4" />
                       <span className="font-bold text-sm">Message Sent Successfully!</span>
                     </div>
@@ -115,7 +115,7 @@ export const Contact: React.FC = () => {
 
               <form
                 onSubmit={handleSubmit}
-                className="space-y-6 rounded-3xl border border-white/12 bg-white/8 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.28)] backdrop-blur-xl"
+                className="space-y-6 rounded-3xl border border-white/12 bg-white/8 p-5 shadow-[0_20px_70px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:p-8"
               >
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div className="space-y-2">

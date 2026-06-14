@@ -187,7 +187,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ onNavigateToProjects
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#050816] py-24 transition-colors duration-300"
+      className="relative overflow-hidden bg-[#050816] py-16 transition-colors duration-300 sm:py-24"
     >
       <div className="absolute inset-0 z-0">
         <Particles
@@ -208,7 +208,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ onNavigateToProjects
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto mb-14 max-w-3xl text-center">
+        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -223,7 +223,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ onNavigateToProjects
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.04 }}
-            className="mb-4 text-4xl font-bold tracking-tight text-white"
+            className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl"
           >
             Milestones that reflect delivery, growth, and measurable results.
           </motion.h2>
@@ -232,7 +232,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ onNavigateToProjects
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.08 }}
-            className="text-lg text-slate-300/82"
+            className="text-base leading-7 text-slate-300/82 sm:text-lg"
           >
             A few concise highlights that help round out the portfolio story beyond the project gallery.
           </motion.p>
@@ -263,7 +263,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ onNavigateToProjects
                 }
                 tabIndex={isProjectsCard ? 0 : -1}
                 role={isProjectsCard ? 'button' : undefined}
-                className={`rounded-3xl border border-white/10 bg-white/8 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.24)] backdrop-blur-xl ${
+                className={`rounded-3xl border border-white/10 bg-white/8 p-5 shadow-[0_20px_70px_rgba(0,0,0,0.24)] backdrop-blur-xl sm:p-8 ${
                   isProjectsCard
                     ? 'cursor-pointer transition duration-300 hover:bg-white/12 focus:outline-none focus:ring-2 focus:ring-cyan-200/60'
                     : ''
@@ -295,7 +295,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ onNavigateToProjects
           })}
         </div>
 
-        <div className="relative mt-20 overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] px-5 py-10 shadow-[0_24px_90px_rgba(0,0,0,0.28)] backdrop-blur-[8px] sm:px-8 lg:px-10">
+        <div className="relative mt-14 overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04] px-4 py-8 shadow-[0_24px_90px_rgba(0,0,0,0.28)] backdrop-blur-[8px] sm:mt-20 sm:rounded-[2rem] sm:px-8 sm:py-10 lg:px-10">
           <div className="absolute inset-0 z-0">
             <Particles
               className="opacity-75"
@@ -325,7 +325,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ onNavigateToProjects
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.24em] text-emerald-300/88">
                 School Achievements
               </p>
-              <h3 className="text-3xl font-bold tracking-tight text-white">
+              <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                 Five sample lanyards for awards, milestones, and campus highlights.
               </h3>
             </motion.div>
@@ -363,7 +363,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ onNavigateToProjects
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 py-8 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/70 px-4 py-8 backdrop-blur-sm"
             onClick={() => setSelectedLanyardId(null)}
           >
             <motion.div
@@ -371,7 +371,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ onNavigateToProjects
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 12, scale: 0.98 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-              className="w-full max-w-2xl rounded-[2rem] border border-white/10 bg-white p-8 shadow-[0_30px_80px_rgba(15,23,42,0.28)] dark:bg-neutral-950"
+              className="max-h-[calc(100svh-4rem)] w-full max-w-2xl overflow-y-auto rounded-[1.5rem] border border-white/10 bg-white p-5 shadow-[0_30px_80px_rgba(15,23,42,0.28)] dark:bg-neutral-950 sm:rounded-[2rem] sm:p-8"
               onClick={(event) => event.stopPropagation()}
             >
               <div className="mb-6 flex items-start justify-between gap-4">
@@ -379,7 +379,7 @@ export const Achievements: React.FC<AchievementsProps> = ({ onNavigateToProjects
                   <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-emerald-600 dark:text-emerald-400">
                     {selectedLanyard.tag} / {selectedLanyard.year}
                   </p>
-                  <h4 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h4 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">
                     {selectedLanyard.title}
                   </h4>
                 </div>

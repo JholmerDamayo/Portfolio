@@ -12,6 +12,17 @@
     scroll-behavior: smooth;
   }
 
+  body {
+    overflow-x: hidden;
+    background: #02030a;
+  }
+
+  img,
+  svg,
+  canvas {
+    max-width: 100%;
+  }
+
   html.portfolio-loading,
   html.portfolio-loading body {
     overflow: hidden;

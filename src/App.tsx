@@ -261,7 +261,7 @@ export default function App() {
           <div
             id="home"
             ref={homeSectionRef}
-            className="sticky top-16 z-0"
+            className="relative z-0 md:sticky md:top-16"
             style={{
               willChange: 'auto'
             }}

@@ -26,8 +26,8 @@ export const Projects: React.FC = () => {
   const activeProject = projects.find((p) => p.id === activeProjectId);
   const activeTitleClassName =
     activeProject?.id === '1'
-      ? 'max-w-none text-white text-[3rem] leading-[0.94] sm:text-[3.6rem] lg:text-[4.4rem] lg:whitespace-nowrap'
-      : 'max-w-3xl text-white text-4xl leading-[0.92] lg:text-[4rem]';
+      ? 'max-w-none text-white text-3xl leading-tight sm:text-[3.6rem] sm:leading-[0.94] lg:text-[4.4rem] lg:whitespace-nowrap'
+      : 'max-w-3xl text-white text-3xl leading-tight sm:text-4xl sm:leading-[0.92] lg:text-[4rem]';
   const projectById = useMemo(
     () => new Map(projects.map((project) => [project.id, project])),
     []
@@ -198,7 +198,7 @@ export const Projects: React.FC = () => {
       onWheel={handleSectionInteraction}
       onKeyDown={handleSectionInteraction}
       className={`relative transition-colors duration-700 overflow-hidden ${
-        activeProject ? 'h-screen pt-24 pb-6 lg:pt-28 lg:pb-8' : 'min-h-[600px] py-24'
+        activeProject ? 'min-h-screen pt-20 pb-10 lg:h-screen lg:pt-28 lg:pb-8' : 'min-h-[600px] py-16 sm:py-24'
       } bg-[#02030a]`}
     >
       <div className="absolute inset-0 z-0">
@@ -254,7 +254,7 @@ export const Projects: React.FC = () => {
         }`}
       >
         {activeProject && (
-          <div className="mb-5 flex justify-start gap-3 md:-ml-[100px] lg:mb-6">
+          <div className="mb-5 flex flex-wrap justify-start gap-3 md:-ml-[100px] lg:mb-6">
             <button
               type="button"
               onClick={closeActiveProject}
@@ -275,17 +275,17 @@ export const Projects: React.FC = () => {
           </div>
         )}
 
-        <div className={`${activeProject ? 'mb-6 lg:mb-8' : 'mb-16'}`}>
+        <div className={`${activeProject ? 'mb-5 lg:mb-8' : 'mb-10 sm:mb-16'}`}>
           {(!activeProject || isProjectDetailsVisible) && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className={activeProject ? 'max-w-fit rounded-3xl border border-white/12 bg-black/12 px-5 py-5 backdrop-blur-[3px] sm:px-6' : ''}
+              className={activeProject ? 'max-w-fit rounded-3xl border border-white/12 bg-black/12 px-4 py-4 backdrop-blur-[3px] sm:px-6 sm:py-5' : ''}
             >
               <h2
-                className={`text-4xl font-bold tracking-tight mb-4 transition-colors duration-500 ${
+                className={`text-3xl font-bold tracking-tight mb-4 transition-colors duration-500 sm:text-4xl ${
                   activeProject ? activeTitleClassName : 'text-white'
                 }`}
               >
@@ -295,7 +295,7 @@ export const Projects: React.FC = () => {
                 className={`text-lg max-w-2xl transition-colors duration-500 ${
                   activeProject
                     ? 'max-w-[66rem] text-base leading-7 text-gray-100/90 lg:text-[1rem]'
-                    : 'max-w-full whitespace-nowrap text-base text-gray-300 lg:text-lg'
+                    : 'max-w-3xl text-base leading-7 text-gray-300 lg:text-lg'
                 }`}
               >
                 {activeProject
@@ -340,7 +340,7 @@ export const Projects: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.45, delay: 0.08 }}
-                  className="rounded-3xl border border-white/12 bg-black/14 px-5 py-5 text-left backdrop-blur-[4px] lg:max-w-3xl lg:self-end lg:pr-4 sm:px-6"
+                  className="rounded-3xl border border-white/12 bg-black/14 px-4 py-4 text-left backdrop-blur-[4px] sm:px-6 sm:py-5 lg:max-w-3xl lg:self-end lg:pr-4"
                 >
                   {activeProject.role && (
                     <p className="mb-4 text-sm font-medium text-emerald-300/95">
@@ -385,7 +385,7 @@ export const Projects: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-full max-w-[500px] justify-self-end self-end"
+                  className="w-full max-w-[500px] justify-self-start self-end lg:justify-self-end"
                 >
                   <MagicBento
                     cards={bentoCards.slice(0, MIN_BENTO_VISIBLE)}

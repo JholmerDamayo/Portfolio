@@ -109,7 +109,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         >
           <div className="relative h-full w-full">
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent px-5 py-4">
-              <h3 className="text-xl font-bold text-white transition-colors">
+              <h3 className="text-lg font-bold leading-tight text-white transition-colors sm:text-xl">
                 {project.title}
               </h3>
             </div>
@@ -117,7 +117,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </GlareHover>
       </motion.div>
 
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-5 flex flex-col flex-grow sm:p-6">
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech) => (
             <span
@@ -128,7 +128,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </span>
           ))}
         </div>
-        <div className="mt-auto flex items-center justify-between gap-3 pt-4 border-t border-gray-50 dark:border-neutral-800">
+        <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-50 dark:border-neutral-800">
           <a
             href={project.deployedUrl}
             target="_blank"

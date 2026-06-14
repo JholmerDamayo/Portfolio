@@ -4,7 +4,7 @@ import Particles from './Particles';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="relative overflow-hidden bg-[#050816] pt-16 pb-8 transition-colors duration-300">
+    <footer className="relative overflow-hidden bg-[#050816] pt-12 pb-8 transition-colors duration-300 sm:pt-16">
       <div className="absolute inset-0 z-0">
         <Particles
           className="opacity-80"
@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-4 md:gap-12 md:mb-16">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <Code2 className="w-8 h-8 text-white" />
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
             <h4 className="mb-6 text-sm font-bold uppercase tracking-widest text-white">Contact</h4>
             <ul className="space-y-4">
               <li>
-                <a href="mailto:damayojholmer@gmail.com" className="flex items-center text-slate-300/82 transition-colors hover:text-white">
+                <a href="mailto:damayojholmer@gmail.com" className="flex items-center break-all text-slate-300/82 transition-colors hover:text-white">
                   <Mail className="w-4 h-4 mr-2" /> damayojholmer@gmail.com
                 </a>
               </li>
@@ -71,9 +71,9 @@ export const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="flex flex-col items-center justify-between border-t border-white/10 pt-8 text-sm text-slate-400 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-center text-sm text-slate-400 md:flex-row md:text-left">
           <p>© {new Date().getFullYear()} Jholmer L. Damayo. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:justify-end">
             <a href="#" className="transition-colors hover:text-white">Privacy Policy</a>
             <a href="#" className="transition-colors hover:text-white">Terms of Service</a>
           </div>
